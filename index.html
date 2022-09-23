@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/imask" defer></script>
+  <script src="main.js" defer></script>
+  <title>Interactive Card Details Form</title>
+</head>
+
+<body>
+  <!-- CONTAINER AREA -->
+  <main>
+    <div class="container" id="container">
+      <h1>Landing Card</h1>
+      <!-- SIDE CARDS AREA -->
+      <aside class="side" id="side">
+        <!-- FRONT CARD AREA -->
+        <div class="front_card">
+          <figure class="front_card_logo">
+            <img src="images/card-logo.svg" alt="card logo">
+          </figure>
+          <section class="front_card_data">
+            <h2 class="front_card_number" id="card_number">
+              0000 0000 0000 0000
+            </h2>
+            <h3 class="front_card_name" id="card_name">
+              JANE APPLESEED
+            </h3>
+            <div class="front_card_data_exp">
+              <h3 class="front_card_data_exp_date" id="exp_month">00</h3>
+              <span class="front_card_data_exp_span">/</span>
+              <h3 class="front_card_data_exp_date" id="exp_year">00</h3>
+            </div>
+          </section>
+        </div>
+        <!-- BACK CARD AREA -->
+        <div class="back_card">
+          <h2 class="back_card_number" id="cvc_number">
+            000
+          </h2>
+        </div>
+      </aside>
+      <!-- FORM AREA -->
+      <form action="#" class="form" id="form">
+        <label for="name">CARDHOLDER NAME</label>
+        <input type="text" name="name" class="form_name_input" id="name" maxlength="25" placeholder="e.g. Jane Appleseed">
+        <span class="span_error" id="name_error"></span>
+        <label for="name">CARD NUMBER</label>
+        <input type="text" name="name" class="form_number_input" id="number" minlength="19" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+        <span class="span_error" id="number_error"></span>
+        <div class="form_exp_cvc">
+          <div class="form_exp">
+            <label for="month">EXP. DATE (MM/YY)</label>
+            <input type="text" name="month" class="form_exp_month" id="month" maxlength="2" placeholder="MM">
+            <input type="text" name="year" id="year" minlength="2" maxlength="2" placeholder="YY">
+            <span class="span_error" id="exp_error"></span>
+          </div>
+          <div class="form_cvc">
+            <label for="cvc">CVC</label>
+            <input type="text" name="cvc" id="cvc" maxlength="3" placeholder="e.g. 123">
+            <span class="span_error" id="cvc_error"></span>
+          </div>
+        </div>
+        <button type="submit" class="form_button">Confirm</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/imask" defer></script>
+  <script src="main.js" defer></script>
+  <title>Interactive Card Details Form</title>
+</head>
+
+<body>
+  <!-- CONTAINER AREA -->
+  <main>
+    <div class="container">
+      <!-- SIDE CARDS AREA -->
+      <aside class="side">
+        <!-- FRONT CARD AREA -->
+        <div class="front_card">
+          <figure class="front_card_logo">
+            <img src="images/card-logo.svg" alt="card logo">
+          </figure>
+          <section class="front_card_data">
+            <h1 class="front_card_number" id="card_number">
+              0000 0000 0000 0000
+            </h1>
+            <h2 class="front_card_name" id="card_name">
+              JANE APPLESEED
+            </h2>
+            <div class="front_card_data_exp">
+              <h3 class="front_card_data_exp_date" id="exp_month">00</h3>
+              <span class="front_card_data_exp_span">/</span>
+              <h3 class="front_card_data_exp_date" id="exp_year">00</h3>
+            </div>
+          </section>
+        </div>
+        <!-- BACK CARD AREA -->
+        <div class="back_card">
+          <h2 class="back_card_number" id="cvc_number">
+            000
+          </h2>
+        </div>
+      </aside>
+      <!-- THANK YOU AREA -->
+      <div class="thankyou">
+        <figure class="thankyou_img">
+            <img src="images/icon-complete.svg" alt="icon complete">
+        </figure>
+        <section class="thankyou_text">
+            <h2 class="thankyou_text_title">THANK YOU!</h2>
+            <p class="thankyou_text_parag">We've added your card details</p>
+        </section>
+        <button class="thankyou_button" id="continue_btn">Continue</button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

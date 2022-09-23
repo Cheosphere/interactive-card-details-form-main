@@ -1,0 +1,462 @@
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --linear-gradient-active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --red-input-errors: hsl(0, 100%, 66%);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 980px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* CONTAINER STYLES */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 33.55% 100%;
+}
+
+h1 {
+    position: absolute;
+    opacity: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    height: 900px;
+    margin-bottom: 5rem;
+    display: flex;
+}
+
+/* SIDE CARDS AREA STYLES */
+.side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--white);
+}
+
+/* FRONT CARD STYLES */
+.front_card {
+    width: 447px;
+    height: 245px;
+    margin-bottom: 2.313rem;
+    margin-right: 6.813rem;
+    padding: 1.75rem 2rem;
+    border-radius: 10px;
+    background-image: url(images/bg-card-front.png);
+    background-size: 102%;
+    box-shadow: 0 .5rem 5rem -.5rem rgba(0, 0, 0, 0.25);
+    transition: all .25s ease-in-out;
+    z-index: 10;
+}
+
+.front_card_data {
+    margin-top: 3.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.front_card_data_exp {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.front_card_data_exp_span {
+    font-size: .85rem;
+    font-weight: 300;
+    margin-right: .15rem;
+}
+
+.front_card_number {
+    width: 100%;
+    margin-bottom: 1.6rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 0.248rem;
+}
+
+.front_card_name,
+.front_card_data_exp_date {
+    font-size: .85rem;
+    font-weight: 300;
+    letter-spacing: 0.14rem;
+    text-transform: uppercase;
+}
+
+.front_card_data_exp_date {
+    margin-left: auto;
+}
+
+/* BACK CARD STYLES */
+.back_card {
+    width: 447px;
+    height: 245px;
+    margin-right: 0.938rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 10px;
+    background-image: url(images/bg-card-back.png);
+    box-shadow: .5rem 2rem 8rem -1rem rgba(0, 0, 0, 0.25);
+    transition: all .25s ease-in-out;
+
+}
+
+.back_card_number {
+    margin-right: 3.56rem;
+    margin-bottom: .2rem;
+    font-size: .85rem;
+    font-weight: 300;
+    letter-spacing: 0.14rem;
+}
+
+/* FORM AREA STYLES */
+.form {
+    width: 50%;
+    padding-top: 17.18rem;
+    padding-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    transition: all .25s ease-in-out;
+}
+
+label {
+    margin-bottom: .5rem;
+    font-size: .75rem;
+    letter-spacing: .125rem;
+}
+
+input::placeholder {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: .016rem;
+    color: var(--dark-grayish-violet);
+    opacity: .4;
+}
+
+input:focus {
+    outline: 1px solid var(--dark-grayish-violet);
+}
+
+input {
+    margin-bottom: 1.65rem;
+    padding: .1rem 0 .05rem .95rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: .015rem;
+    border: 1px solid var(--light-grayish-violet);
+    border-radius: 8px;
+}
+
+.input_error {
+    outline: 1px solid var(--red-input-errors);
+}
+
+.span_error {
+    position: relative;
+    bottom: 1.15rem;
+    font-size: .76rem;
+    letter-spacing: -.002rem;
+    color: var(--red-input-errors);
+}
+
+.form_name_input,
+.form_number_input {
+    width: 381px;
+    height: 45px;
+}
+
+.form_number_input {
+    padding-top: .06rem;
+}
+
+.form_exp_cvc {
+    width: 100%;
+    margin-top: -1px;
+    margin-bottom: .9rem;
+    display: flex;
+}
+
+.form_exp {
+    width: 170px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form_exp input {
+    width: 80px;
+    height: 45px;
+}
+
+.form_exp span {
+    order: 2;
+}
+
+.form_exp_month {
+    margin-right: .6rem;
+}
+
+.form_cvc {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_cvc input {
+    width: 191px;
+    height: 45px;
+}
+
+.form_button,
+.thankyou_button {
+    width: 381px;
+    height: 53px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.06rem;
+    letter-spacing: .032rem;
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    background-color: var(--very-dark-violet);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.form_button:hover,
+.thankyou_button:hover {
+    opacity: .5;
+}
+
+/* THANK YOU PAGE STYLES */
+.thankyou {
+    width: 50%;
+    padding: 19.06rem 7.1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all .25s ease-in-out;
+}
+
+.thankyou_text {
+    margin: 1.9rem 0 2.9rem 0;
+}
+
+.thankyou_text_title {
+    margin-bottom: .93rem;
+    font-size: 1.72rem;
+    font-weight: 500;
+    letter-spacing: .231rem;
+}
+
+.thankyou_text_parag {
+    font-size: 1.1rem;
+    letter-spacing: .019rem;
+    color: var(--dark-grayish-violet);
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1180px) {
+
+    .side {
+        width: 65%;
+    }
+
+    .front_card {
+        margin-right: 4.5rem;
+    }
+
+    .form {
+        padding-left: 1.2rem;
+    }
+
+    .thankyou {
+        padding-right: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+
+    main {
+        background-size: 100% 33.55%;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .side {
+        width: 535px;
+        height: fit-content;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .front_card {
+        margin: 0;
+        align-self: flex-start;
+        position: relative;
+        top: -6.6rem;
+    }
+
+    .back_card {
+        margin: 0;
+        align-self: flex-end;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 381px;
+        margin: -5rem 4rem 0 4rem;
+        padding: 0;
+        align-items: center;
+    }
+
+    .form label {
+        align-self: flex-start;
+    }
+
+    .form_exp_cvc {
+        justify-content: center;
+    }
+
+    .span_error {
+        align-self: flex-start;
+    }
+
+    .thankyou {
+        width: 90%;
+        margin-top: -6rem;
+        padding: 0;
+    }
+
+    .thankyou_button {
+        width: 100%;
+        max-width: 381px;
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+
+    body {
+        min-height: 768px;
+    }
+
+    main {
+        align-items: flex-start;
+        background-image: url(images/bg-main-mobile.png);
+        background-size: 100% 240px;
+        overflow: hidden;
+    }
+
+    .container {
+        width: fit-content;
+    }
+
+    .side {
+        width: fit-content;
+        margin-top: -.71rem;
+        overflow: hidden;
+    }
+
+    .front_card {
+        align-self: flex-end;
+        transform: scale(.64);
+        top: -9.72rem;
+        left: -1.7rem;
+    }
+
+    .back_card {
+        align-self: flex-start;
+        transform: scale(.64);
+        position: relative;
+        right: -1.7rem;
+    }
+
+    .form {
+        max-width: 330px;
+        margin: -22.35rem 0 0 0;
+    }
+
+    input {
+        margin-bottom: 1.27rem;
+    }
+
+    .form_name_input,
+    .form_number_input {
+        width: 100%;
+        height: 45px;
+    }
+
+    .form_exp {
+        width: 60%;
+        margin-right: .45rem;
+    }
+    .form_exp_month {
+        margin-right: .35rem;
+    }
+
+    .form_exp input {
+        width: 47%;
+    }
+
+    .form_cvc {
+        width: 40%;
+    }
+
+    .form_cvc input {
+        width: 100%;
+    }
+
+    .form_exp_cvc {
+        margin-bottom: .49rem;
+    }
+
+    .form_button {
+        width: 100%;
+    }
+
+    .thankyou {
+        max-width: 330px;
+        margin-top: -20rem;
+    }
+
+    .thankyou_button {
+        width: 100%;
+    }
+
+}
