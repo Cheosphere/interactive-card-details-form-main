@@ -30,7 +30,7 @@ body {
 /* CONTAINER STYLES */
 main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@ main {
 .container {
     width: 100%;
     max-width: 1440px;
-    height: fit-content;
+    height: 900px;
     display: flex;
 }
 
@@ -137,7 +137,7 @@ main {
 /* FORM AREA STYLES */
 .form {
     width: 50%;
-    padding-top: 5.5rem;
+    padding-top: 17.18rem;
     padding-left: 7rem;
     display: flex;
     flex-direction: column;
