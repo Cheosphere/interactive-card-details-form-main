@@ -39,16 +39,10 @@ main {
     background-size: 33.55% 100%;
 }
 
-h1 {
-    position: absolute;
-    opacity: 0;
-}
-
 .container {
     width: 100%;
     max-width: 1440px;
     height: 900px;
-    margin-bottom: 5rem;
     display: flex;
 }
 
