@@ -21,7 +21,6 @@ body {
 }
 
 body {
-    min-height: 980px;
     display: flex;
     justify-content: center;
     font-family: 'Space Grotesk', sans-serif;
@@ -302,6 +301,10 @@ input {
 }
 
 @media screen and (max-width: 980px) {
+
+    body {
+        min-height: 980px;
+    }
 
     main {
         height: 100%;
