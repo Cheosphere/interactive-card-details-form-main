@@ -95,6 +95,7 @@ form.addEventListener('submit', (event) => {
     } else if (validarNumero(expYearInput.value) == false) {
         expError.innerHTML = "Wrong format, only numbers"
     } else if (cvcInput.value === '') {
+        expError.innerHTML = ""
         expYearInput.classList.remove('input_error')
         cvcError.innerHTML = "Can't be blank"
         cvcInput.classList.add('input_error')
